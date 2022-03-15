@@ -1,0 +1,63 @@
+/*
+* reset & general styles
+*/
+body {
+    margin: 0;
+    background-color: #f0db4f;
+    color: #323330;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.text {
+    background-color: #f5f6f7;
+    color: #323330;
+    padding: 10%;
+}
+
+.text a {
+    color: #f0db4f;
+}
+
+/*
+* header & navigation
+*/
+header {
+    color: #323330;
+}
+
+header a {
+    color: #323330;
+    text-decoration: none;
+}
+
+header nav a {
+    border-bottom: 1% solid transparent;
+    transition: 0.1s;
+}
+
+header nav a:hover {
+    border-color: #323330;
+}
+
+/*
+*   main content area
+*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*
+*   footer
+*/
+footer {
+
+}
