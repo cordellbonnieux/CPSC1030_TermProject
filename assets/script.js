@@ -33,7 +33,6 @@ const navList = document.createElement('ul')
 const github = new Image(32, 32)
 const linkedin = new Image(32, 32)
 const hamburger = document.createElement('div')
-
 const links = [
     'home',
     'web',
@@ -87,9 +86,21 @@ links.forEach((link) => {
     navList.appendChild(li)
 })
 
-// what to do when hamburger icon is clicked
+// Handle hamburger icon clicks
+let showMenu = false
+navList.className = 'none'
+socials.className = 'none'
 hamburger.addEventListener('click', (e) => {
-    // either show or hide menu and socials using boolean and css classes
+    // show or hide using css classes (not properties)
+    if (showMenu) {
+        socials.className = 'none'
+        navList.className = 'none'
+        showMenu = false
+    } else {
+        socials.className = 'block'
+        navList.className = 'block'
+        showMenu = true     
+    }
 })
 
 /*
