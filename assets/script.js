@@ -25,6 +25,12 @@ wrap.appendChild(socials)
 */
 const nav = document.createElement('nav')
 const navList = document.createElement('ul')
+const hamburger = document.createElement('div')
+for (let i = 0; i < 3; i++) {
+    hamburger.appendChild(document.createElement('span'))
+}
+hamburger.id = 'hamburger'
+nav.appendChild(hamburger)
 nav.appendChild(navList)
 header.appendChild(nav)
 const links = [
@@ -52,6 +58,9 @@ links.forEach((link) => {
 
     li.appendChild(a)
     navList.appendChild(li)
+})
+hamburger.addEventListener('click', (e) => {
+
 })
 
 

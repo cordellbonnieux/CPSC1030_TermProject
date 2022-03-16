@@ -50,8 +50,8 @@ header #wrap {
     display: flex;
     justify-content: space-between;
     max-width: 900px;
-    margin: 25px auto;
-    padding:25px;
+    margin: 25px 0;
+    padding:5px;
 }
 
 header #wrap * {
@@ -68,6 +68,7 @@ header #wrap h1 {
     /*
     left: 0;
     */
+    text-align: left;
 }
 
 header #wrap #socials {
@@ -76,6 +77,24 @@ header #wrap #socials {
     */
 }
 
+header nav #hamburger {
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    padding: 4px;
+}
+
+header nav #hamburger span{
+    width: 32px;
+    height: 4px;
+    margin: 6px 0;
+    display: block;
+    background-color: #323330;
+    border-radius: 4px;
+}
+
+/*
+* large size nav
 header nav {
     max-width: 900px;
     margin: 0 auto;
@@ -102,13 +121,14 @@ header nav ul li a {
 header nav ul li a:hover {
     border-bottom-color: #323330;
 }
+*/
 
 /*
 *   main content area
 */
 main {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-evenly;
     max-width: 900px;
     margin: 0 auto;
