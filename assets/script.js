@@ -66,25 +66,7 @@ nav.appendChild(navList)
 header.appendChild(nav)
 
 // append each menu link
-links.forEach((link) => {
-    const li = document.createElement('li')
-    const a = document.createElement('a')
-    const path = link.split(' ').join('')
-    a.textContent = link
-
-    if (page == link) {
-        a.href = `#${link}`
-    } else if (page != 'home' && link != 'home') {
-        a.href = `${path}.html`
-    } else if (page != 'home' && link == 'home') {
-        a.href = `../index.html`
-    } else if (page == 'home' && link != 'home') {
-        a.href = `pages/${path}.html`
-    }
-
-    li.appendChild(a)
-    navList.appendChild(li)
-})
+links.forEach((link) => createMenu(link, navList))
 
 // Handle hamburger icon clicks
 let showMenu = false
@@ -104,6 +86,13 @@ hamburger.addEventListener('click', (e) => {
 })
 
 /*
+* footer
+*/
+const footerList = document.createElement('ul')
+links.forEach((link => createMenu(link, footerList)))
+footer.appendChild(footerList)
+
+/*
 * helper functions
 */
 // get the currently loaded page
@@ -112,6 +101,27 @@ function getPage() {
     switch (body.id) {
         case 'home' : return 'home'
         case 'web' : return 'web'
-        default : return 'something went wrong'
+        default : return 'the page was not recognized'
     }
+}
+
+// create a menu based on the current page
+function createMenu(link, list) {
+    const li = document.createElement('li')
+    const a = document.createElement('a')
+    const path = link.split(' ').join('')
+    a.textContent = link
+
+    if (page == link) {
+        a.href = `#${link}`
+    } else if (page != 'home' && link != 'home') {
+        a.href = `${path}.html`
+    } else if (page != 'home' && link == 'home') {
+        a.href = `../index.html`
+    } else if (page == 'home' && link != 'home') {
+        a.href = `pages/${path}.html`
+    }
+
+    li.appendChild(a)
+    list.appendChild(li)  
 }

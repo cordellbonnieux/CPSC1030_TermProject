@@ -65,15 +65,13 @@ header a {
 }
 
 header #wrap {
-    display: flex;
-    justify-content: space-between;
-    max-width: 900px;
+    max-width: 80%;
     margin: 10px 0;
     padding:5px;
+    text-align: left;
 }
 
 header #wrap h1 {
-    text-align: left;
     margin: 0;
     padding: 0;
 }
@@ -116,8 +114,9 @@ header nav #socials, header nav ul {
 
 header nav #socials {
     padding-top: 6px;
-    top: 404px;
-    right: 20px;
+    padding-left: 2px;
+    top: 400px;
+    right: 19px;
     background-color: #f0db4f;
 }
 
@@ -131,6 +130,7 @@ header nav ul {
 header nav li {
     background-color: #f0db4f;
     padding: 18px;
+    margin: -1px;
 }
 
 header nav li a{
@@ -179,8 +179,11 @@ main {
     margin: 0 auto;
 }
 
+#avatar, #home .text {
+    margin: 25px 0;
+}
+
 #avatar {
-    margin: 100px 0;
     border-radius: 360px;
 }
 
@@ -188,7 +191,7 @@ main {
     background-color: #f5f6f7;
     color: #323330;
     padding: 2em;
-    margin: 100px 0;
+    margin: 0;
     max-width: 400px;
     transform: skewY(-7deg);
 }
