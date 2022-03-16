@@ -1,3 +1,8 @@
+/**
+ * CPSC 1030 - Term Project Demo
+ * Cordell Bonnieux 100372192
+ */
+
 /*
 *   selectors
 */
@@ -10,29 +15,25 @@ let page = getPage()
 * header
 */
 const title = document.createElement('h1')
-const socials = document.createElement('div')
 const wrap = document.createElement('div')
 wrap.id = 'wrap'
-socials.id = 'socials'
 title.textContent = 'Cordell Bonnieux\'s Resume'
-socials.textContent = 'socials go here'
 header.appendChild(wrap)
 wrap.appendChild(title)
-wrap.appendChild(socials)
+
 
 /*
 * navigation
+* hamburger menu icon, social links, navigation list
 */
+// declare elements
 const nav = document.createElement('nav')
+const socials = document.createElement('div')
 const navList = document.createElement('ul')
+const github = new Image(32, 32)
+const linkedin = new Image(32, 32)
 const hamburger = document.createElement('div')
-for (let i = 0; i < 3; i++) {
-    hamburger.appendChild(document.createElement('span'))
-}
-hamburger.id = 'hamburger'
-nav.appendChild(hamburger)
-nav.appendChild(navList)
-header.appendChild(nav)
+
 const links = [
     'home',
     'web',
@@ -40,6 +41,32 @@ const links = [
     'work experience',
     'education',
 ]
+
+// create hamburger icon using span nodes
+for (let i = 0; i < 3; i++) {
+    hamburger.appendChild(document.createElement('span'))
+}
+
+// add social icons to object
+github.src = '../img/github.png'
+linkedin.src = '../img/linkedin.png'
+
+
+// assign ids & classes
+hamburger.id = 'hamburger'
+socials.id = 'socials'
+github.className = 'social'
+linkedin.className = 'social'
+
+// append elements
+socials.appendChild(linkedin)
+socials.appendChild(github)
+nav.appendChild(hamburger)
+nav.appendChild(socials)
+nav.appendChild(navList)
+header.appendChild(nav)
+
+// append each menu link
 links.forEach((link) => {
     const li = document.createElement('li')
     const a = document.createElement('a')
@@ -59,14 +86,16 @@ links.forEach((link) => {
     li.appendChild(a)
     navList.appendChild(li)
 })
+
+// what to do when hamburger icon is clicked
 hamburger.addEventListener('click', (e) => {
-
+    // either show or hide menu and socials using boolean and css classes
 })
-
 
 /*
 * helper functions
 */
+// get the currently loaded page
 function getPage() {
     const body = document.querySelector('body')
     switch (body.id) {
@@ -74,4 +103,4 @@ function getPage() {
         case 'web' : return 'web'
         default : return 'something went wrong'
     }
-}   
+}

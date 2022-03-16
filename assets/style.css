@@ -1,4 +1,9 @@
 /*
+ * CPSC 1030 - Term Project Demo
+ * Cordell Bonnieux 100372192
+ */
+
+/*
 * imports
 */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
@@ -26,6 +31,17 @@ a:hover {
     text-decoration: none;
 }
 
+.social {
+    cursor: pointer;
+    margin: 2px 12px;
+    border-radius: 32px;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.social:hover {
+    background-color: #f5f6f7;
+}
 
 /*
 * header & navigation
@@ -41,47 +57,30 @@ header a {
 }
 
 header #wrap {
-    /*
-    position: relative;
-    display: inline-block;
-    margin: 5% auto;
-    text-align: left;
-    */
     display: flex;
     justify-content: space-between;
     max-width: 900px;
-    margin: 25px 0;
+    margin: 10px 0;
     padding:5px;
 }
 
-header #wrap * {
-    display: inline-block;
-    /*
-    position: absolute;
-    top: 33%;
-    */
+header #wrap h1 {
+    text-align: left;
     margin: 0;
     padding: 0;
 }
 
-header #wrap h1 {
-    /*
-    left: 0;
-    */
-    text-align: left;
-}
-
-header #wrap #socials {
-    /*
-    right: 0;
-    */
-}
-
 header nav #hamburger {
+    background-color: #f0db4f;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
     width: 32px;
-    height: 32px;
+    height: 34px;
     margin: 4px;
-    padding: 4px;
+    padding: 6px;
+    border-radius: 4px;
 }
 
 header nav #hamburger span{
@@ -91,6 +90,37 @@ header nav #hamburger span{
     display: block;
     background-color: #323330;
     border-radius: 4px;
+}
+
+header nav #socials, header nav ul {
+    position: fixed;
+    transform: skewY(4deg);
+    margin: 0;
+    z-index: 2;
+    width: 50%;
+}
+
+header nav #socials {
+    padding-top: 6px;
+    top: 404px;
+    right: 20px;
+    background-color: #f0db4f;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    top: 86px;
+    right: 20px;
+}
+
+header nav li {
+    background-color: #f0db4f;
+    padding: 18px;
+}
+
+header nav li a{
+    font-size: 1.4em;
 }
 
 /*
@@ -111,6 +141,7 @@ header nav ul {
 header nav ul li{
 
 }
+*/
 
 header nav ul li a {
     border-bottom: 3px solid transparent;
@@ -121,7 +152,7 @@ header nav ul li a {
 header nav ul li a:hover {
     border-bottom-color: #323330;
 }
-*/
+
 
 /*
 *   main content area
