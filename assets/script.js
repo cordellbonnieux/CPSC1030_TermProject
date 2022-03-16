@@ -84,6 +84,100 @@ hamburger.addEventListener('click', (e) => {
         showMenu = true     
     }
 })
+/*
+* page - grid
+*/
+// data, in a real world situation i would use json files
+const webMockContent = [
+    {
+        title: 'Example Project',
+        href: '#',
+        img: '../img/example.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
+            + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+            + 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+            + 'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in '
+            + 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+            + 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia '
+            + 'deserunt mollit anim id est laborum.'
+    },
+    {
+        title: 'Example Project',
+        href: '#',
+        img: '../img/example.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
+            + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+            + 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+            + 'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in '
+            + 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+            + 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia '
+            + 'deserunt mollit anim id est laborum.'
+    },
+    {
+        title: 'Example Project',
+        href: '#',
+        img: '../img/example.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
+            + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+            + 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+            + 'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in '
+            + 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+            + 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia '
+            + 'deserunt mollit anim id est laborum.'
+    },
+    {
+        title: 'Example Project',
+        href: '#',
+        img: '../img/example.jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
+            + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+            + 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+            + 'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in '
+            + 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
+            + 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia '
+            + 'deserunt mollit anim id est laborum.'
+    }
+]
+function createGrid(content) {
+    const container = document.createElement('div')
+    container.id = 'grid'
+    content.forEach((object) => {
+        let item = document.createElement('div')
+        item.className = 'item text'
+
+        let titleWrap = document.createElement('a')
+        titleWrap.href = object.href
+        titleWrap.target = '_blank'
+
+        let title = document.createElement('h3')
+        title.textContent = object.title
+
+        let imgWrap = document.createElement('a')
+        imgWrap.href = object.href
+        imgWrap.target = '_blank'
+
+        let img = document.createElement('img')
+        img.src = object.img
+
+        let description = document.createElement('p')
+        description.textContent = object.description
+
+        container.appendChild(item)
+        item.appendChild(imgWrap)
+        item.appendChild(titleWrap)
+        item.appendChild(description)
+        titleWrap.appendChild(title)
+        imgWrap.appendChild(img)
+    })
+    main.appendChild(container)
+}
+/*
+* main section
+* depending on the current page, display dynamic content
+*/
+if (page == 'web') {
+    createGrid(webMockContent)
+}
 
 /*
 * footer

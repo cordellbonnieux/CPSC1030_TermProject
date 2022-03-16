@@ -13,6 +13,7 @@
 */
 html {
     margin: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
     font-family: 'Fira Code', monospace;
     position: relative;
     min-height: 100vh;
+    width: 100vw;
 }
 
 a {
@@ -82,11 +84,12 @@ header #wrap h1 {
 }
 
 header nav #hamburger {
+    z-index: 2;
     background-color: #f0db4f;
     cursor: pointer;
     position: fixed;
     top: 10px;
-    right: 10px;
+    right: 25px;
     width: 32px;
     height: 34px;
     margin: 4px;
@@ -129,7 +132,7 @@ header nav #socials {
 header nav ul {
     padding: 0;
     list-style: none;
-    top: 86px;
+    top: 60px;
     right: 20px;
 }
 
@@ -142,26 +145,6 @@ header nav li {
 header nav li a{
     font-size: 1.4em;
 }
-
-/*
-* large size nav
-header nav {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0; 
-    padding: 0;
-}
-
-header nav ul li{
-
-}
-*/
 
 header nav ul li a {
     border-bottom: 3px solid transparent;
@@ -194,13 +177,31 @@ main {
     border-radius: 360px;
 }
 
+#home .text {
+    max-width: 400px;
+}
+
+#web #grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#web #grid .item {
+    margin: 25px;
+}
+
+#web .text {
+    max-width: 300px;
+}
+
 .text {
     background-color: #f5f6f7;
     color: #323330;
     padding: 2em;
     margin: 0;
-    max-width: 400px;
     transform: skewY(-7deg);
+    box-shadow: -4px -6px #323330;
 }
 
 .text h2, .text h3, .text p {
@@ -208,9 +209,6 @@ main {
     padding: 0;
 }
 
-.text a {
-    color: #f0db4f;
-}
 /*
 *   footer
 */
@@ -233,6 +231,12 @@ footer ul {
 /*
 * responsive styles for larger screens
 */
+@media (min-width: 442px) { 
+    header nav #socials {
+        top: 369px;
+    }
+}
+
 @media (min-width: 830px) { 
     main {
         padding-right: 300px;
@@ -247,15 +251,20 @@ footer ul {
         display: block;
         max-width: 300px;
     }
+
+    header nav #socials, header nav li {
+        background-color: transparent;
+    }
 }
 
 @media (min-width: 1200px) { 
     main {
+        margin-top: 75px;
         padding-right: 300px;
         max-width: 900px;
     }
 
-    header nav ul, header nav #socials{
+    header nav ul, header nav #socials {
         left: 70%;
     }
 }
