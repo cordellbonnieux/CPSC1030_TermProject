@@ -30,6 +30,8 @@ wrap.appendChild(title)
 const nav = document.createElement('nav')
 const socials = document.createElement('div')
 const navList = document.createElement('ul')
+const githubWrap = document.createElement('a')
+const linkedinWrap = document.createElement('a')
 const github = new Image(32, 32)
 const linkedin = new Image(32, 32)
 const hamburger = document.createElement('div')
@@ -49,6 +51,10 @@ for (let i = 0; i < 3; i++) {
 // add social icons to object
 github.src = '../img/github.png'
 linkedin.src = '../img/linkedin.png'
+linkedinWrap.href = 'https://www.linkedin.com/in/cordell-bonnieux-0896641b8/'
+githubWrap.href = 'https://github.com/cordellbonnieux'
+linkedinWrap.target = '_blank'
+githubWrap.target = '_blank'
 
 
 // assign ids & classes
@@ -58,8 +64,10 @@ github.className = 'social'
 linkedin.className = 'social'
 
 // append elements
-socials.appendChild(linkedin)
-socials.appendChild(github)
+linkedinWrap.appendChild(linkedin)
+githubWrap.appendChild(github)
+socials.appendChild(linkedinWrap)
+socials.appendChild(githubWrap)
 nav.appendChild(hamburger)
 nav.appendChild(socials)
 nav.appendChild(navList)
@@ -158,6 +166,7 @@ function createGrid(content) {
 
         let img = document.createElement('img')
         img.src = object.img
+        img.alt = object.title
 
         let description = document.createElement('p')
         description.textContent = object.description

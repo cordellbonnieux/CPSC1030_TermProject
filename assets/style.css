@@ -129,6 +129,10 @@ header nav #socials {
     background-color: #f0db4f;
 }
 
+header nav #socials a {
+    text-decoration: none;
+}
+
 header nav ul {
     padding: 0;
     list-style: none;
