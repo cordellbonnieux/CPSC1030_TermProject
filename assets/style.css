@@ -195,7 +195,7 @@ main {
     margin: 25px;
 }
 
-#web .text {
+#web .text, #web img {
     max-width: 300px;
 }
 
@@ -238,6 +238,10 @@ footer ul {
 @media (min-width: 442px) { 
     header nav #socials {
         top: 369px;
+    }
+
+    header nav #hamburger {
+        right: 15px;
     }
 }
 

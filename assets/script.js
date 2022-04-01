@@ -185,7 +185,7 @@ function createGrid(content) {
 * depending on the current page, display dynamic content
 */
 if (page == 'web') {
-    createGrid(webMockContent)
+    createGrid(getWebData()) //webMockContent
 }
 
 /*
@@ -227,4 +227,25 @@ function createMenu(link, list) {
 
     li.appendChild(a)
     list.appendChild(li)  
+}
+
+/**
+ * Page Data Goes Here
+ */
+function getWebData() {
+    return [
+        {
+            title: 'Asteroid Blaster',
+            href: 'https://cordellbonnieux.github.io/CPSC2130_Lab3/',
+            img: '../img/asteroids.png',
+            description: 'This is a "twin-stick shooter" I built using vanilla JavaScript and the Canvas API. Embracing common game design techniques I opted for an object oriented approach in this game\'s design.'
+        },
+        {
+            title: 'Weather App',
+            href: 'https://cordellbonnieux.github.io/Weather-App/dist/',
+            img: '../img/weather.png',
+            description: 'This web application allows you to retrieve the current weather conditions for any city on the planet.' +
+            'This app was built using Node.js, Webpack, JavaScript and REST APIs for getting the weather and relevent images.'
+        }
+    ]
 }
