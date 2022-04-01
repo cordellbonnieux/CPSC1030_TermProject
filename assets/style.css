@@ -185,17 +185,17 @@ main {
     max-width: 400px;
 }
 
-#web #grid {
+#grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-#web #grid .item {
+#grid .item {
     margin: 25px;
 }
 
-#web .text, #web img {
+#grid .text, #grid img {
     max-width: 300px;
 }
 

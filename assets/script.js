@@ -95,57 +95,6 @@ hamburger.addEventListener('click', (e) => {
 /*
 * page - grid
 */
-// data, in a real world situation i would use json files
-const webMockContent = [
-    {
-        title: 'Example Project',
-        href: '#',
-        img: '../img/example.jpg',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
-            + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-            + 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
-            + 'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in '
-            + 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
-            + 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia '
-            + 'deserunt mollit anim id est laborum.'
-    },
-    {
-        title: 'Example Project',
-        href: '#',
-        img: '../img/example.jpg',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
-            + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-            + 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
-            + 'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in '
-            + 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
-            + 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia '
-            + 'deserunt mollit anim id est laborum.'
-    },
-    {
-        title: 'Example Project',
-        href: '#',
-        img: '../img/example.jpg',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
-            + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-            + 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
-            + 'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in '
-            + 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
-            + 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia '
-            + 'deserunt mollit anim id est laborum.'
-    },
-    {
-        title: 'Example Project',
-        href: '#',
-        img: '../img/example.jpg',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,' 
-            + 'sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
-            + 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
-            + 'nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in '
-            + 'reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '
-            + 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia '
-            + 'deserunt mollit anim id est laborum.'
-    }
-]
 function createGrid(content) {
     const container = document.createElement('div')
     container.id = 'grid'
@@ -186,6 +135,8 @@ function createGrid(content) {
 */
 if (page == 'web') {
     createGrid(getWebData()) //webMockContent
+} else if (page == 'graphics') {
+    createGrid(getGraphicsData())
 }
 
 /*
@@ -204,7 +155,8 @@ function getPage() {
     switch (body.id) {
         case 'home' : return 'home'
         case 'web' : return 'web'
-        default : return 'the page was not recognized'
+        case 'graphics' : return 'graphics'
+        default : console.log('The page was not recognized by getPage() function.')
     }
 }
 
@@ -246,6 +198,48 @@ function getWebData() {
             img: '../img/weather.png',
             description: 'This web application allows you to retrieve the current weather conditions for any city on the planet.' +
             'This app was built using Node.js, Webpack, JavaScript and REST APIs for getting the weather and relevent images.'
+        },
+        {
+            title: 'Tic Tac Toe',
+            href: 'https://cordellbonnieux.github.io/tic-tac-toe/',
+            img: '../img/tic.png',
+            description: 'Another vanilla JavaScript game, this classic I built playable versus the AI, or locally with a friend.'
+        },
+        {
+            title: 'Bouncy Ball',
+            href: 'https://cordellbonnieux.github.io/CPSC2130_Lab7/',
+            img: '../img/ball.png',
+            description: 'This JavaScript application was built using the BABYLON.js library. In this game, you are a bouncy ball,' +
+            'you can move with W A S D, jump with Space-Bar and activate the animations with the shift button.'
+        }
+    ]
+}
+
+function getGraphicsData() {
+    return [
+        {
+            title: 'Dance Party',
+            href: '../img/dance.png',
+            img: '../img/dance.png',
+            description: 'A flyer I did for a dance party last year, created using GIMP2.'
+        },
+        {
+            title: 'Fractured Concert',
+            href: '../img/fractured.jpg',
+            img: '../img/fractured.jpg',
+            description: 'Also created using GIMP2, a flyer for an upcoming concert.'
+        },
+        {
+            title: 'Raw War LP',
+            href: '../img/rawwar.jpg',
+            img: '../img/rawwar.jpg',
+            description: 'The cover of a layout for a 12" record I completed recently, using Photoshop, GIMP2 and Illustrator.'
+        },
+        {
+            title: 'Phane 7"',
+            href: '../img/phane.jpg',
+            img: '../img/phane.jpg',
+            description: 'The cover of another record layout which I created using Photoshop.'
         }
     ]
 }
