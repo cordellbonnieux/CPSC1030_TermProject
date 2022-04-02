@@ -195,8 +195,8 @@ main .text {
 }
 
 #secondary .text {
-    max-width: 400px;
-    margin: 25px 5px;   
+    max-width: 460px;
+    margin: 25px 10px;   
 }
 
 #grid {
@@ -225,6 +225,21 @@ main .text {
 .text h2, .text h3, .text p {
     margin: 1em;
     padding: 0;
+}
+
+table {
+    font-size: 0.8em;
+    border-spacing: 1;
+    background-color: rgba(50, 51, 48, 0.5);
+}
+
+table th{
+    background-color: #323330;
+    color: #f0db4f;
+}
+
+table td {
+    background-color: #f5f6f7;
 }
 
 /*
@@ -273,6 +288,10 @@ footer ul {
 
     #secondary {
         padding-right: 300px;
+    }
+
+    table {
+        font-size: 1em;
     }
 
     header #hamburger {
