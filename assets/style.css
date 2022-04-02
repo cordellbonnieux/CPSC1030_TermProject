@@ -124,7 +124,7 @@ header nav #socials, header nav ul {
 header nav #socials {
     padding-top: 6px;
     padding-left: 2px;
-    top: 490px;
+    top: 550px;
     right: 19px;
     background-color: #f0db4f;
 }
@@ -186,6 +186,12 @@ main, #secondary {
 
 #avatar {
     border-radius: 360px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#avatar:hover {
+    transform: rotate(360deg)
 }
 
 main .text {
@@ -277,7 +283,7 @@ footer ul {
 */
 @media (min-width: 442px) { 
     header nav #socials {
-        top: 465px;
+        top: 523px;
     }
 
     header nav #hamburger {
@@ -285,9 +291,9 @@ footer ul {
     }
 }
 
-@media (min-width: 568px) { 
+@media (min-width: 582px) { 
     header nav #socials {
-        top: 435px;
+       top: 500px; 
     }
 }
 

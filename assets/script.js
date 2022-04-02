@@ -48,6 +48,7 @@ const links = [
     'work experience',
     'volunteer experience',
     'education',
+    'contact'
 ]
 
 // create hamburger icon using span nodes
