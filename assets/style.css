@@ -124,7 +124,7 @@ header nav #socials, header nav ul {
 header nav #socials {
     padding-top: 6px;
     padding-left: 2px;
-    top: 400px;
+    top: 490px;
     right: 19px;
     background-color: #f0db4f;
 }
@@ -159,7 +159,6 @@ header nav ul li a {
 header nav ul li a:hover {
     border-bottom-color: #323330;
 }
-
 
 /*
 *   main content area
@@ -252,11 +251,17 @@ footer ul {
 */
 @media (min-width: 442px) { 
     header nav #socials {
-        top: 369px;
+        top: 465px;
     }
 
     header nav #hamburger {
         right: 15px;
+    }
+}
+
+@media (min-width: 568px) { 
+    header nav #socials {
+        top: 435px;
     }
 }
 

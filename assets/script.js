@@ -46,6 +46,7 @@ const links = [
     'web',
     'graphics',
     'work experience',
+    'volunteer experience',
     'education',
 ]
 
