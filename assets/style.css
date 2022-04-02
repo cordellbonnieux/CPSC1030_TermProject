@@ -164,7 +164,7 @@ header nav ul li a:hover {
 /*
 *   main content area
 */
-main {
+main, #secondary {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -185,7 +185,7 @@ main {
     border-radius: 360px;
 }
 
-main .text {
+main .text, #secondary .text {
     max-width: 400px;
     min-width: 300px;
     margin: 25px;
