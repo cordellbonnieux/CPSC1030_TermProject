@@ -12,14 +12,20 @@ const footer = document.querySelector('footer')
 let page = getPage()
 
 /*
-* header
+* header with contact
 */
 const title = document.createElement('h1')
 const wrap = document.createElement('div')
+const contact = document.createElement('div')
+const email = document.createElement('a')
+email.href = 'mailto:cbonnieux00@mylangara.ca'
+email.textContent = 'cbonnieux00@mylangara.ca'
 wrap.id = 'wrap'
 title.textContent = 'Cordell Bonnieux\'s Resume'
+contact.appendChild(email)
 header.appendChild(wrap)
 wrap.appendChild(title)
+wrap.appendChild(contact)
 
 
 /*
@@ -56,8 +62,7 @@ githubWrap.href = 'https://github.com/cordellbonnieux'
 linkedinWrap.target = '_blank'
 githubWrap.target = '_blank'
 
-
-// assign ids & classes
+// assign ids
 hamburger.id = 'hamburger'
 socials.id = 'socials'
 github.className = 'social'
