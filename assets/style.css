@@ -45,6 +45,7 @@ a:hover {
 
 .social:hover {
     background-color: #f5f6f7;
+    transform: rotate(360deg);
 }
 
 .block {
