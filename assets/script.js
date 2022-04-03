@@ -136,6 +136,7 @@ function createGrid(content) {
     })
     main.appendChild(container)
 }
+
 /*
 * main section
 * depending on the current page, display dynamic content
@@ -144,6 +145,11 @@ if (page == 'web') {
     createGrid(getWebData()) //webMockContent
 } else if (page == 'graphics') {
     createGrid(getGraphicsData())
+} else if (page == 'home') {
+    const avatar = document.getElementById('avatar')
+    avatar.addEventListener('click', () => {
+        alert('Quit poking me!')
+    })
 }
 
 /*
